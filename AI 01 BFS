@@ -1,0 +1,26 @@
+graph = {
+  'a' : ['b','c'],
+  'b' : ['d'],
+  'c' : ['e','f'],
+  'd' : ['h'],
+  'e' : [],
+  'f' : ['g','i'],
+  'g' : [],
+  'h' : [],
+  'i' : []
+}
+
+def bfs(n): 
+  list=[]
+  list.append(n)
+
+
+  while list:
+    m= list.pop(0) 
+    print (m) 
+
+    for neighbour in graph[m]:
+      if neighbour not in list:
+        list.append(neighbour)
+        
+bfs('a')
